@@ -1,5 +1,4 @@
-# University-Campus-Network-Design
-
+# Enterprise-Network-Design 
 **Objective**
 
 The aim of this project is to develop a robust and efficient network infrastructure customized to meet the specific demands of a University Campus Network. The university's students and staff are organized across four faculties: Health and Sciences, Business, Engineering/Computing, and Art/Design. Each staff member is equipped with a personal computer, and students have access to PCs in various labs. Each department or faculty will be assigned its own distinct IP network. Switches should be configured with the necessary VLANs and security settings. RIPv2 will handle routing within the internal network, while static routing will be used for the external server. Devices in Building A should obtain dynamic IP addresses from a DHCP server located on a router. Design a network topology incorporating the main components needed to support the following:
