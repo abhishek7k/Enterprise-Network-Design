@@ -13,7 +13,7 @@ A comprehensive enterprise-grade network design and configuration project for a 
 Below is the complete network topology screenshot designed in Cisco Packet Tracer:
 
 <p align="center">
-  <img src="./University%20Campus%20Network%20Image.png" alt="University Campus Network Topology Diagram" width="100%" />
+  <img src="./assets/topology-diagram.png" alt="University Campus Network Topology Diagram" width="100%" />
 </p>
 
 ---
@@ -68,7 +68,7 @@ Below is the complete network topology screenshot designed in Cisco Packet Trace
 ## 📁 Repository Files
 
 - 📄 [`Design and Configuration of a University Campus Network.pdf`](./Design%20and%20Configuration%20of%20a%20University%20Campus%20Network.pdf) - Detailed technical project documentation and configuration guide.
-- 🖼️ [`University Campus Network Image.png`](./University%20Campus%20Network%20Image.png) - High-resolution screenshot of the Packet Tracer network topology.
+- 🖼️ [`assets/topology-diagram.png`](./assets/topology-diagram.png) - High-resolution screenshot of the Packet Tracer network topology.
 - ⚙️ [`University Campus Network with Vlans, Ripv2 and ssh.pkt`](./University%20Campus%20Network%20with%20Vlans,%20Ripv2%20and%20ssh.pkt) - Interactive Cisco Packet Tracer topology file (`.pkt`).
 
 ---
