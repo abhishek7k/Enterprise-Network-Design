@@ -1,27 +1,88 @@
-# Enterprise-Network-Design 
-**Objective**
+# Enterprise Network Design & Implementation
 
-The aim of this project is to develop a robust and efficient network infrastructure customized to meet the specific demands of a University Campus Network. The university's students and staff are organized across four faculties: Health and Sciences, Business, Engineering/Computing, and Art/Design. Each staff member is equipped with a personal computer, and students have access to PCs in various labs. Each department or faculty will be assigned its own distinct IP network. Switches should be configured with the necessary VLANs and security settings. RIPv2 will handle routing within the internal network, while static routing will be used for the external server. Devices in Building A should obtain dynamic IP addresses from a DHCP server located on a router. Design a network topology incorporating the main components needed to support the following:
+[![Cisco Packet Tracer](https://img.shields.io/badge/Cisco%20Packet%20Tracer-v8.x-00569B?style=for-the-badge&logo=cisco&logoColor=white)](https://www.netacad.com/)
+[![Routing Protocol](https://img.shields.io/badge/Routing-RIPv2-orange?style=for-the-badge)](https://en.wikipedia.org/wiki/Routing_Information_Protocol)
+[![Security](https://img.shields.io/badge/Security-SSH%20%26%20Switchport%20Security-green?style=for-the-badge)](https://en.wikipedia.org/wiki/Secure_Shell)
 
-**Main Campus**
+A comprehensive enterprise-grade network design and configuration project for a multi-campus **University Network Infrastructure**. Designed and simulated using **Cisco Packet Tracer**, this network topology incorporates VLAN segmentation, inter-VLAN routing, dynamic DHCP configuration, SSH management, RIPv2 routing, and integrated mail/web server services.
 
-- Building A: Administrative staff in the departments of management, HR and finance. The admin staff PCs are distributed in the building offices and it is expected that they will share some networking. The Faculty of Business is also situated in this building.
-- Building B: Faculty of Engineering and Computing and Faculty of Art and Design.
-- Building C:  Students labs and IT department. The IT department  hosts the University Web  server and other  servers - There is also an email  server hosted externally on the cloud.
-- 
-**Small Campus**
-  
-Faculty of Health and Sciences (staff and students labs are situated on separate floors).
+---
 
-**Network Technology implemented**
+## 📸 Network Topology Overview
 
-1. Creating a Simple Network using a Router, Access Layer Switch and Distribution Layer Switch
-2. Connecting Networking devices with Correct cabling
-3. Creating VLANs and assigning ports VLAN numbers
-4. Subnetting and IP Addressing
-5. Configuring Inter-VLAN Routing (Router on a stick)
-6. Configuring DHCP Server (Router as the DHCP Server)
-7. Configuring SSH for secure Remote access
-8. Configuring RIPv2 as the routing protocol
-9. Configuring Email and Web Server
-10. Host Device Configurations
+Below is the complete network topology screenshot designed in Cisco Packet Tracer:
+
+<p align="center">
+  <img src="./University%20Campus%20Network%20Image.png" alt="University Campus Network Topology Diagram" width="100%" />
+</p>
+
+---
+
+## 🏛️ Campus Architecture
+
+### 1. Main Campus
+- **Building A (Administration & Business):**
+  - Administrative staff across Management, HR, and Finance departments.
+  - Faculty of Business.
+  - Dynamic IP allocation powered by DHCP configured directly on the Main Campus Router.
+- **Building B (Engineering & Arts):**
+  - Faculty of Engineering & Computing.
+  - Faculty of Art & Design.
+- **Building C (IT Department & Labs):**
+  - Student computer laboratories.
+  - Central IT Department hosting the University Web Server and internal services.
+  - External Cloud connection linking to an off-site Email Server.
+
+### 2. Small Campus
+- **Faculty of Health & Sciences:**
+  - Dedicated floor segmentation separating staff offices and student laboratories.
+  - Managed via dedicated Distribution L3 Switch and regional router.
+
+---
+
+## 🛠️ Implemented Network Technologies & Features
+
+1. **Hierarchy Topology Design**: Structured Access Layer (L2 Switches), Distribution Layer (L3 Switches), and Core Routers.
+2. **Standardized Cabling**: Copper Straight-Through, Cross-Over, and Serial DCE connections.
+3. **VLAN Segmentation**: Departmental traffic separation across all campuses and building switches.
+4. **Inter-VLAN Routing (Router-on-a-Stick)**: Sub-interface routing enabling secure cross-VLAN communication.
+5. **Subnetting & Addressing**: Efficient IPv4 subnet allocation per department/faculty.
+6. **DHCP Server Service**: Automated IP addressing for end-user workstations in Building A and regional departments.
+7. **Secure Remote Management**: Encrypted SSH access configured across L3 switches and routers.
+8. **RIPv2 Routing Protocol**: Dynamic routing protocol implementation for interior campus networks.
+9. **Static Routing**: Dedicated static routes for external web/email cloud server connectivity.
+10. **Application Services**: Operational HTTP Web Server and SMTP/POP3 Email Server testing.
+11. **Switchport Security**: Port-level security policies on access switches to block unauthorized host connections.
+
+---
+
+## 📊 Key Highlights & Results
+
+- **Scalability**: Structured VLAN allocation allows seamless expansion of new departments or physical buildings without major topology overhauls.
+- **Security**: SSH replaces clear-text Telnet for all administrative CLI access; switchport security prevents unauthorized physical intrusions.
+- **Traffic Management**: Segregated broadcast domains reduce network congestion and improve overall bandwidth utilization.
+- **Service Verification**: Fully verified end-to-end communication, including DNS name resolution, HTTP web browsing, dynamic DHCP acquisition, and inter-departmental email transmission.
+
+---
+
+## 📁 Repository Files
+
+- 📄 [`Design and Configuration of a University Campus Network.pdf`](./Design%20and%20Configuration%20of%20a%20University%20Campus%20Network.pdf) - Detailed technical project documentation and configuration guide.
+- 🖼️ [`University Campus Network Image.png`](./University%20Campus%20Network%20Image.png) - High-resolution screenshot of the Packet Tracer network topology.
+- ⚙️ [`University Campus Network with Vlans, Ripv2 and ssh.pkt`](./University%20Campus%20Network%20with%20Vlans,%20Ripv2%20and%20ssh.pkt) - Interactive Cisco Packet Tracer topology file (`.pkt`).
+
+---
+
+## 🚀 How to Run / Inspect in Packet Tracer
+
+1. Download and install **Cisco Packet Tracer** (v8.0 or newer recommended).
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/abhishek7k/Enterprise-Network-Design.git
+   ```
+3. Open the `.pkt` file inside Cisco Packet Tracer:
+   ```text
+   University Campus Network with Vlans, Ripv2 and ssh.pkt
+   ```
+4. Verify dynamic IP configuration via PC Desktop -> Command Prompt (`ipconfig /renew`).
+5. Test connectivity using `ping`, `traceroute`, or the built-in Web Browser / Email Client in Packet Tracer.
